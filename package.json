@@ -1,0 +1,17 @@
+{
+  "name": "firstnodeapp",
+  "version": "1.0.0",
+  "description": "A simple banking application",
+  "main": "Index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "Sample test statement"
+  },
+  "author": "Ajitabh Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
