@@ -1,22 +1,13 @@
 # Using latest node.js library
 FROM node:latest
 
-RUN npm install --global yarn pm2
-
-RUN adduser node root
-
 # Setup working direcoty
-WORKDIR /home/node/app
+WORKDIR /app
 
 # Copy required files into working direcoty
-COPY src/*.*  /home/node/app/src/
-COPY lib/*.*  /home/node/app/lib/
-COPY *.json   /home/node/app/
-
-RUN yarn install --production
-
-RUN chmod -R 775 /home/node/app
-RUN chown -R node:root /home/node/app
+COPY src/*.*  /app/src/
+COPY lib/*.*  /app/lib/
+COPY *.json   /app/
 
 # Expose the required port
 EXPOSE 8080
