@@ -2,12 +2,12 @@
 FROM node:latest
 
 # Setup working direcoty
-WORKDIR /app
+WORKDIR $HOME/app
 
 # Copy required files into working direcoty
-COPY src/*.*  /app/src/
-COPY lib/*.*  /app/lib/
-COPY *.json   /app/
+COPY src/*.*  $HOME/app/src/
+COPY lib/*.*  $HOME/app/lib/
+COPY *.json   $HOME/app/
 
 # Expose the required port
 EXPOSE 8080
